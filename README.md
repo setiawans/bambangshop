@@ -92,4 +92,16 @@ Dalam kasus ini, meskipun pola Singleton memastikan hanya ada satu instance obje
 
 #### Reflection Publisher-2
 
+> In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+
+Pemisahan Service dan Repository dari Model dalam pola Model-View-Controller (MVC) penting untuk mengikuti prinsip-prinsip design seperti _Single Responsibility Principle_ (SRP). Model dalam MVC hanya bertugas sebagai representasi data dari basis data, sementara Repository bertanggung jawab untuk akses dan penyimpanan data, dan Service menangani logika yang ada. Dengan memisahkan Service dan Repository dari sebuah Model, kode kita akan menjadi lebih mudah dipahami dan mudah dipelihara karena setiap komponen memiliki tanggung jawab yang jelas dan terpisah. Pemisahan ini juga mempermudah pengujian setiap komponen secara terpisah, memungkinkan pengembangan yang lebih fleksibel dan _scalable_ tanpa mengganggu bagian lain dalam kode. Selain itu, perubahan pada satu bagian tidak mempengaruhi bagian lainnya, sehingga kode menjadi lebih mudah dimodifikasi. 
+
+> What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+
+Jika kita hanya menggunakan Model tanpa pembagian seperti Service dan Repository, kita akan menghadapi masalah pada depedensi antara komponen-komponen dalam sistem. Model akan bertanggung jawab untuk menangani baik penyimpnan data maupun logika, yang melanggar prinsip Single Responsibility Principle (SRP). Hal ini menyebabkan kode menjadi sulit untuk dipelihara, karena setiap perubahan pada satu bagian dapat mempengaruhi bagian lain secara signifikan, yang terkadang meningkatkan kompleksitas kode secara keseluruhan serta memperlambat pengembangan lebih lanjut.
+
+> Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+
+Saya sudah melakukan eksplorasi terhadap aplikasi Postman ini. Postman merupakan suatu alat yang sangat berguna untuk menguji endpoint aplikasi web menggunakan permintaan HTTP. Dengan Postman, kita dapat menguji endpoint tanpa perlu menulis kode, yang sangat memudahkan dalam menguji fungsionalitas aplikasi secara cepat. Beberapa fitur yang sangat membantu saya selama ini adalah fitur untuk menyimpan _request_ dan _response_, mengontrol _header_ dan _body request_, serta mengelola _cookie_ yang sangat berguna ketika melakukan pengujian terhadap endpoint aplikasi web yang saya miliki. Fitur dokumentasi API juga sangat penting karena memudahkan saya untuk berbagi dokumentasi API dengan teman-teman yang lain. Alat ini akan sangat bermanfaat dalam proyek perangkat lunak saya di masa depan, karena memungkinkan saya melakukan pengujian dengan efisien dan memungkinkan kolaborasi dengan teman-teman saya yang lain.
+
 #### Reflection Publisher-3
